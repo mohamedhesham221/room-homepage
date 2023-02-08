@@ -27,13 +27,16 @@
   }
   .description {
     grid-column: 3/5;
-    height: 460px !important;
+    height: 100% !important;
   }
   .description p, .about p:last-child {
     font-size: 10px !important;
   }
-  .description, .about {
-    padding: 60px 80px 0 !important;
+  .description {
+    padding: 20px 80px 0 !important;
+  }
+  .about {
+    padding: 100px 80px 0 !important;
   }
   .bg-one {
     grid-column: 1/2;
@@ -109,10 +112,18 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .description, .about {
-    padding: 60px 100px 0 !important;
+    padding: 50px 100px 0 !important;
   }
   .description p, .about p:last-child {
-    font-size: 12px !important;
+    font-size: 15px !important;
   }
+}
 
+@media only screen and (min-width: 1440px) {
+  .description, .about {
+    padding: 100px 100px 0 !important;
+  }
+  .description p, .about p:last-child {
+    font-size: 15px !important;
+  }
 }
