@@ -1,0 +1,159 @@
+:root {
+--darkGray: hsl(0, 0%, 63%);
+--black: hsl(0, 0%, 0%);
+--white: hsl(0, 0%, 100%);
+--veryGray: hsl(0, 0%, 27%);
+--font: 'Spartan', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.room {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+}
+.navbar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: hsl(0deg 0% 27% / 47%);
+    z-index: 99999;
+    transition: all .5s linear;
+}
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 230px;
+    list-style: none;
+}
+nav ul li {
+    font-family: var(--font);
+    text-transform: lowercase;
+    font-size: calc(1rem - 2px);
+    font-weight: 700;
+}
+.slider {
+    width: 100%;
+    height: auto;
+}
+.room__logo {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--white);
+}
+.hamburger {
+    width: 30px !important;
+    height: auto !important;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+.slider img, .bg-one img, .bg-two img {
+    width: 100%;
+    height: 100%;
+}
+.description {
+    width: 100%;
+    height: 400px;
+    padding: 60px 20px 0;
+    position: relative;
+}
+.arrows {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: -67px;
+    right: 0;
+    background-color: var(--black);
+}
+.arrows .btn {
+    outline: none;
+    border: none;
+    padding: 23px;
+    background-color: transparent;
+    transition: all .2s linear;
+}
+.arrows .btn img {
+    width: 10px;
+    height: auto;
+}
+h2 {
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: calc(1rem + 10px);
+    margin-bottom: 30px;
+    color: var(--black);
+}
+.description p, .about p:last-child {
+    font-family: var(--font);
+    color: var(--darkGray);
+    font-size: calc(1rem - 5px);
+    line-height: 2;
+    white-space: pre-line;
+    font-weight: 700;
+}
+.description .shop__btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-top: 50px;
+    width: 100%;
+    font-family: var(--font);
+    font-size: calc(1rem - 3px);
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-align: start;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.about {
+    width: 100%;
+    height: 300px;
+    padding: 60px 20px 20px;
+}
+.about p:first-child {
+    font-family: var(--font);
+    color: var(--black);
+    font-size: calc(1rem - 2px);
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.bg-one {
+    width: 100%;
+    height: auto;
+}
+
+
+.hide-nav {
+    top: -1000px;
+}
+.show-nav {
+    top: 0;
+}
+
+footer {
+    margin: 100px 0 20px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

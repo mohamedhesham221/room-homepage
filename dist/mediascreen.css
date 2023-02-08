@@ -1,0 +1,118 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  nav {
+    padding: 0 50px 0 0;
+  }
+  .hamburger {
+    left: 30px !important;
+  }
+  .arrows {
+    width: 175px !important;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .description p, .about p:last-child {
+    font-size: 15px !important;
+    white-space: normal !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .room {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .slider {
+    grid-column: 1/3;
+  }
+  .description {
+    grid-column: 3/5;
+    height: 460px !important;
+  }
+  .description p, .about p:last-child {
+    font-size: 10px !important;
+  }
+  .description, .about {
+    padding: 60px 80px 0 !important;
+  }
+  .bg-one {
+    grid-column: 1/2;
+  }
+  .about {
+    grid-column: 2/4;
+  }
+  .bg-two {
+    grid-column: 4/5;
+  }
+  .room__logo {
+    right: unset !important;
+    left: 20px !important;
+    top: 20px !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+  .hide-nav {
+    top: 0 !important;
+  }
+  nav img {
+    display: none;
+  }
+  .navbar {
+    position: absolute !important;
+    width: 60% !important;
+    height: 70px !important;
+    background-color: transparent !important;
+  }
+  nav {
+    color: #fff;
+    background-color: transparent !important;
+    padding-right: 135px !important;
+  }
+  .arrows {
+    top: unset !important;
+    right: unset !important;
+    bottom: 0;
+    left: 0;
+  }
+  .arrows button {
+    cursor: pointer;
+  }
+  .arrows:hover > :not(:hover) {
+    opacity: .3;
+  }
+  .shop__btn:hover {
+    opacity: .5;
+  }
+  ul li {
+    cursor: pointer;
+  }
+  ul li::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    margin: auto;
+    transition: all .2s linear;
+    
+  }
+  ul li:hover {
+    color: #000;
+  }
+  ul li:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .description, .about {
+    padding: 60px 100px 0 !important;
+  }
+  .description p, .about p:last-child {
+    font-size: 12px !important;
+  }
+
+}
