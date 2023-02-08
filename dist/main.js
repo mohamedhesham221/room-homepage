@@ -29,21 +29,51 @@ let closeNav = document.getElementById("close-nav"),
     },
   ];
 
-  if (window.matchMedia("(min-width: 600px)").matches) {
-    img.src = "images/desktop-image-hero-"+count+".jpg"
-  } else {
-    img.src = "images/mobile-image-hero-"+count+".jpg"
+  //render image depend on window width mobile or desktop 
+if (window.matchMedia("(min-width: 600px)").matches) {
+  img.src = "images/desktop-image-hero-" + count + ".jpg";
+} else {
+  img.src = "images/mobile-image-hero-" + count + ".jpg";
+}
+//slider with arrow keys in keyboard left and right
+window.addEventListener("keydown", (e) => {
+  if (e.key == "ArrowRight") {
+    count++;
+    if (count == 4) {
+      count = 1;
+    }
+    if (window.matchMedia("(min-width: 600px)").matches) {
+      img.src = "images/desktop-image-hero-" + count + ".jpg";
+    } else {
+      img.src = "images/mobile-image-hero-" + count + ".jpg";
+    }
+    head.textContent = slider[count - 1].sliderHead;
+    desc.textContent = slider[count - 1].sliderDesc;
+  } else if (e.key == "ArrowLeft") {
+    count--;
+    if (count == 0) {
+      count = 3;
+    }
+    if (window.matchMedia("(min-width: 600px)").matches) {
+      img.src = "images/desktop-image-hero-" + count + ".jpg";
+    } else {
+      img.src = "images/mobile-image-hero-" + count + ".jpg";
+    }
+    head.textContent = slider[count - 1].sliderHead;
+    desc.textContent = slider[count - 1].sliderDesc;
   }
-  
+});
+
+//slider with click on arrow buttons
 const goRight = () => {
   count++;
   if (count == 4) {
     count = 1;
   }
   if (window.matchMedia("(min-width: 600px)").matches) {
-    img.src = "images/desktop-image-hero-"+count+".jpg"
+    img.src = "images/desktop-image-hero-" + count + ".jpg";
   } else {
-    img.src = "images/mobile-image-hero-"+count+".jpg"
+    img.src = "images/mobile-image-hero-" + count + ".jpg";
   }
   head.textContent = slider[count - 1].sliderHead;
   desc.textContent = slider[count - 1].sliderDesc;
@@ -54,9 +84,9 @@ const goLeft = () => {
     count = 3;
   }
   if (window.matchMedia("(min-width: 600px)").matches) {
-    img.src = "images/desktop-image-hero-"+count+".jpg"
+    img.src = "images/desktop-image-hero-" + count + ".jpg";
   } else {
-    img.src = "images/mobile-image-hero-"+count+".jpg"
+    img.src = "images/mobile-image-hero-" + count + ".jpg";
   }
   head.textContent = slider[count - 1].sliderHead;
   desc.textContent = slider[count - 1].sliderDesc;
@@ -64,6 +94,7 @@ const goLeft = () => {
 btnRight.addEventListener("click", goRight);
 btnLeft.addEventListener("click", goLeft);
 
+//show and hide navbar in mobile screen
 const showNav = () => {
   navbar.classList.remove("hide-nav");
   navbar.classList.add("show-nav");
