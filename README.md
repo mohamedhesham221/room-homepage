@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-I learned how to create basic images slider with plain javascript.
+I learned how to create basic images slider using plain javascript and slider can slide with clicking on buttons or key arrows in keyboard.
 
 ## Author
 
