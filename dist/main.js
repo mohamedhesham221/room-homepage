@@ -30,9 +30,9 @@ let closeNav = document.getElementById("close-nav"),
   ];
 
   if (window.matchMedia("(min-width: 600px)").matches) {
-    img.src = "../dist/images/desktop-image-hero-"+count+".jpg"
+    img.src = "images/desktop-image-hero-"+count+".jpg"
   } else {
-    img.src = "../dist/images/mobile-image-hero-"+count+".jpg"
+    img.src = "images/mobile-image-hero-"+count+".jpg"
   }
   
 const goRight = () => {
@@ -41,9 +41,9 @@ const goRight = () => {
     count = 1;
   }
   if (window.matchMedia("(min-width: 600px)").matches) {
-    img.src = "../dist/images/desktop-image-hero-"+count+".jpg"
+    img.src = "images/desktop-image-hero-"+count+".jpg"
   } else {
-    img.src = "../dist/images/mobile-image-hero-"+count+".jpg"
+    img.src = "images/mobile-image-hero-"+count+".jpg"
   }
   head.textContent = slider[count - 1].sliderHead;
   desc.textContent = slider[count - 1].sliderDesc;
@@ -54,9 +54,9 @@ const goLeft = () => {
     count = 3;
   }
   if (window.matchMedia("(min-width: 600px)").matches) {
-    img.src = "../dist/images/desktop-image-hero-"+count+".jpg"
+    img.src = "images/desktop-image-hero-"+count+".jpg"
   } else {
-    img.src = "../dist/images/mobile-image-hero-"+count+".jpg"
+    img.src = "images/mobile-image-hero-"+count+".jpg"
   }
   head.textContent = slider[count - 1].sliderHead;
   desc.textContent = slider[count - 1].sliderDesc;
